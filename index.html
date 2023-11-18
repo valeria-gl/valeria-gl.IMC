@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de IMC</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif; /* Cambia la familia de fuentes */
+      font-size: 16px; /* Cambia el tamaño de la fuente */
+      line-height: 1.6; /* Cambia la altura de línea */
+      color: #333; /* Cambia el color del texto principal */
+      background-color: #f4f4f4; /* Cambia el color de fondo del cuerpo */
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px; /* Cambia el tamaño de la fuente para los títulos */
+      color: #333; /* Cambia el color del título */
+      text-align: center; /* Centra el título */
+      text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    }
+
+    p {
+      font-size: 18px; /* Cambia el tamaño de la fuente para los párrafos */
+      color: #555; /* Cambia el color del texto del párrafo */
+    }
+
+    label {
+      font-weight: bold; /* Hace que las etiquetas sean más llamativas */
+      color: #777; /* Cambia el color del texto de la etiqueta */
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="button"] {
+      padding: 8px; /* Agrega relleno a los campos de entrada y botones */
+      margin-bottom: 15px; /* Agrega un margen inferior para separar los campos */
+      border: 1px solid #ccc; /* Agrega un borde alrededor de los campos */
+      border-radius: 5px; /* Agrega esquinas redondeadas a los campos */
+    }
+
+    input[type="button"] {
+      background-color: #4caf50; /* Cambia el color de fondo del botón */
+      color: white; /* Cambia el color del texto del botón */
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+
+    input[type="button"]:hover {
+      background-color: #45a049; /* Cambia el color de fondo del botón al pasar el cursor */
+    }
+
+    #resultado {
+      font-size: 20px; /* Cambia el tamaño de la fuente para el resultado */
+      margin-top: 20px; /* Agrega un margen superior para separar el resultado */
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Bienvenidx!</h1>
+  <h1>Calculadora de Índice de Masa Corporal (IMC)</h1>
+  <p>Por favor, siga las indicaciones del formulario.</p>
+  <p>Ingrese la siguiente información, con el formato requerido.</p>
+  <form id="imcForm">
+    <label for="edad">Edad en años (Ejemplo: 32): </label>
+    <input type="number" id="edad" name="edad" required><br><br>
+
+    <label for="peso">Peso en kilogramos (Ejemplo: 80): </label>
+    <input type="number" step="any" id="peso" name="peso" required><br><br>
+
+    <label for="altura">Altura en centímetros(Ejemplo: 193): </label>
+    <input type="number" step="any" id="altura" name="altura" required><br><br>
+
+    <label for="alergias">Alergias que presente, cada una separadas con coma (Ejemplo: Lactosa, harinas): </label>
+    <input type="text" id="alergias" name="alergias"><br><br>
+
+    <input type="button" value="Calcular IMC" onclick="calcularIMC()">
+  </form>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
